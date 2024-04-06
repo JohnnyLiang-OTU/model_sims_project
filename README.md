@@ -1,6 +1,6 @@
-Requires pygame.
+Requires pygame. <br>
 To install:
-- pip3 install pygame
+\- pip3 install pygame
 
 1. Clone Repository
 - git clone [https://github.com/JohnnyLiang-OTU/model_sims_project.git](https://github.com/JohnnyLiang-OTU/model_sims_project.git)
