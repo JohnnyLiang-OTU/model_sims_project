@@ -205,7 +205,7 @@ class Spaceship(pygame.sprite.Sprite):
 def main():
 	pygame.init()
 	paused = False
-	ring_influence = True
+	ring_influence = False
 	win_width = 1280
 	win_height = 640
 	screen = pygame.display.set_mode((win_width, win_height))
@@ -290,6 +290,7 @@ def main():
 						C.color = mix_color(A_body.color, B_body.color)
 						C.radius = int(math.sqrt((A_body.radius)**2+(B_body.radius)**2))
 						C.span = C.radius*10
+						C.mass = A_body.mass + B_body.mass
 						group_body.remove(A_body)
 						group_body.remove(B_body)
 						group_body.append(C)
