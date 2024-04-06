@@ -198,7 +198,7 @@ class Spaceship(pygame.sprite.Sprite):
 		return distance <= (r1 + r2)
 
 	def handleCollision(self, screen):
-		self.set_image("Project/assets/explosion.png")
+		self.set_image("assets/explosion.png")
 		self.update()
 		self.draw(screen)    
 
@@ -211,10 +211,10 @@ def main():
 	screen = pygame.display.set_mode((win_width, win_height))
 	pygame.display.set_caption('Gravitational Simulation')
 
-	spaceship = Spaceship('Project/assets/up.png')
+	spaceship = Spaceship('assets/up.png')
 	group_body = []
 
-	num_bodies = 10
+	num_bodies = 6
 	for _ in range(num_bodies):
 		pos = random_location()
 		body = CelestialBody(state = pos)
@@ -241,33 +241,33 @@ def main():
 		elif event.type == pygame.KEYDOWN and event.key == pygame.K_p:
 			paused = True
 		elif keys[pygame.K_UP] and keys[pygame.K_RIGHT] and not paused:
-			spaceship.set_image("Project/assets/up_right.png")
+			spaceship.set_image("assets/up_right.png")
 			spaceship.state[2] += ACCELERATOR
 			spaceship.state[3] += ACCELERATOR
 		elif keys[pygame.K_UP] and keys[pygame.K_LEFT] and not paused:
-			spaceship.set_image("Project/assets/up_left.png")
+			spaceship.set_image("assets/up_left.png")
 			spaceship.state[2] -= ACCELERATOR
 			spaceship.state[3] += ACCELERATOR
 		elif keys[pygame.K_DOWN] and keys[pygame.K_LEFT] and not paused:
-			spaceship.set_image("Project/assets/down_left.png")
+			spaceship.set_image("assets/down_left.png")
 			spaceship.state[2] -= ACCELERATOR
 			spaceship.state[3] -= ACCELERATOR
 		elif keys[pygame.K_DOWN] and keys[pygame.K_RIGHT] and not paused:
-			spaceship.set_image("Project/assets/down_right.png")
+			spaceship.set_image("assets/down_right.png")
 			spaceship.state[2] += ACCELERATOR
 			spaceship.state[3] -= ACCELERATOR
 		elif keys[pygame.K_LEFT] and not paused:
 			spaceship.state[2] -= ACCELERATOR
-			spaceship.set_image("Project/assets/left.png")
+			spaceship.set_image("assets/left.png")
 		elif keys[pygame.K_RIGHT] and not paused:
 			spaceship.state[2] += ACCELERATOR
-			spaceship.set_image("Project/assets/right.png")
+			spaceship.set_image("assets/right.png")
 		elif keys[pygame.K_DOWN] and not paused:
 			spaceship.state[3] -= ACCELERATOR
-			spaceship.set_image("Project/assets/down.png")
+			spaceship.set_image("assets/down.png")
 		elif keys[pygame.K_UP] and not paused:
 			spaceship.state[3] += ACCELERATOR
-			spaceship.set_image("Project/assets/up.png")	
+			spaceship.set_image("assets/up.png")	
 		else:
 			pass
 
