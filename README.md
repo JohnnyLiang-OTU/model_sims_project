@@ -1,5 +1,5 @@
-Super important NOTE: The topic of this simulation is different to that chosen as proposal. This is due to the proposal being not doable for me.
-<br>
+Super important NOTE: The topic of this simulation is different to that chosen as proposal. This is due to the proposal being not doable for me. Sorry for any troubles that causes and any consequences are understood.
+<br> <br>
 Requires pygame. <br>
 To install:
 \- pip3 install pygame
