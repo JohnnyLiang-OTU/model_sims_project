@@ -1,5 +1,4 @@
-Dependencies needed<br>
-pygame<br>
+Dependencies needed: pygame<br>
 <br>
 To run this project:
 1. Clone Repository
